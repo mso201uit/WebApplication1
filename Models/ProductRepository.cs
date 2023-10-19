@@ -14,7 +14,10 @@ namespace WebApplication1.Models
         }
         public IEnumerable<Product> GetAll()
         {
-            var products = db.Product;
+            var products = db.Product
+            .Include(cat => cat.Category)
+            .Include(man => man.Manufacturer)
+            .ToList();
             return products;
         }
 

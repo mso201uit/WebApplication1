@@ -9,11 +9,11 @@ namespace WebApplication1.Controllers
         public ActionResult Index()
         {
             List<Product> products = new List<Product>{
-            new Product {Name="Hammer", Price=121.50m, Category="Verktøy"},
-            new Product {Name="Vinkelsliper", Price=1520.00m, Category ="Verktøy"},
-            new Product {Name="Melk", Price=14.50m, Category ="Dagligvarer"},
-            new Product {Name="Kjøttkaker", Price=32.00m, Category ="Dagligvarer"},
-            new Product {Name="Brød", Price=25.50m, Category ="Dagligvarer"}
+            new Product {Name="Hammer", Price=121.50m, CategoryId=1},
+            new Product {Name="Vinkelsliper", Price=1520.00m, CategoryId =1},
+            new Product {Name="Melk", Price=14.50m, CategoryId =3},
+            new Product {Name="Kjøttkaker", Price=32.00m, CategoryId =3},
+            new Product {Name="Brød", Price=25.50m, CategoryId =3}
             };
 
             return View(products);
